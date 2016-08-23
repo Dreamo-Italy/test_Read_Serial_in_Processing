@@ -1,5 +1,5 @@
 //********************************************************
-// class Particle
+// class Scene
 // last modified: 21/08/16
 //
 //  descrive una scena all'interno della visualizzazione
