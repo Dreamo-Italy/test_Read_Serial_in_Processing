@@ -17,7 +17,7 @@ Generic description of the classes of the program:
 - SCHERMO is the class that manages the drawing. It includes the address of the scene to be showed. 
  
 - A scene transition happens if a certain time has elapsed (class TIMELINE), or if there're particular biomedic input (class INPUT SENSORIALI) or if something happens on the audio input (class ELABORAZIONE AUDIO).
- These 3 scenes are also useful to inform the current scene of any input variation.
+ These 3 classes are also useful to inform the current scene of any input variation.
 
 - DATA is the class which contains the arrays of every kind of particle, where "particle" is a visual object; DATA also includes pointers to the backgrounds and the scenes.
  
