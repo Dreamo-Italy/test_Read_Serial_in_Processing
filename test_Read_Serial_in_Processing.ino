@@ -27,7 +27,6 @@ void loop() {
     CON = conductance;
     // delay 10ms to let the ADC recover:
     delay(10);
-    // read second analog input, divide by 4 to make the range 0-255:
     // read second analog input:
     RES = resistance;
     // read  switch
