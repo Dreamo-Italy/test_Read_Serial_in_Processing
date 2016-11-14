@@ -1,9 +1,9 @@
 #include <eHealth.h>
 
 
-int CON = 0;    // first analog sensor 
-int RES = 0;   // second analog sensor
-int CONV= 0;    // digital sensor
+int CON = 0;      // first analog sensor 
+int RES = 0;      // second analog sensor
+int CONV= 0;      // digital sensor
 int inByte = 0;         // incoming serial byte
 
 void setup() {
@@ -21,16 +21,16 @@ void loop() {
   float resistance = eHealth.getSkinResistance();
   float conductanceVol = eHealth.getSkinConductanceVoltage();
 
-   if (Serial.available() > 0) {
-    // get incoming byte:
-   // inByte = Serial.read();
-    // read first analog input, divide by 4 to make the range 0-255:
+   if (Serial.available() > 0) 
+   {
+    // read first analog input:
     CON = conductance;
     // delay 10ms to let the ADC recover:
     delay(10);
     // read second analog input, divide by 4 to make the range 0-255:
+    // read second analog input:
     RES = resistance;
-    // read  switch, map it to 0 or 255L
+    // read  switch
    CONV = conductanceVol;
     // send sensor values:
     Serial.write(CON);
@@ -38,21 +38,21 @@ void loop() {
     Serial.write(CONV);
   }
   
-  Serial.print("Conductance : ");       
-  Serial.print(conductance, 2);  
-  Serial.println("");         
-
-  Serial.print("Resistance : ");       
-  Serial.print(resistance, 2);  
-  Serial.println("");    
-
-  Serial.print("Conductance Voltage : ");       
-  Serial.print(conductanceVol, 4);  
-  Serial.println("");
-
-  Serial.print("\n");
+    Serial.print("Conductance : ");       
+    Serial.print(conductance, 2);  
+    Serial.println("");         
   
-  delay(30);    //clock for reading the signal        
+    Serial.print("Resistance : ");       
+    Serial.print(resistance, 2);  
+    Serial.println("");    
+  
+    Serial.print("Conductance Voltage : ");       
+    Serial.print(conductanceVol, 4);  
+    Serial.println("");
+  
+    Serial.print("\n");
+  
+    delay(30);    //clock for reading the signal        
  }
 
 

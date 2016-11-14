@@ -61,9 +61,14 @@ void draw()
   
   if ( myPort.available() > 0) 
   {  // If data is available,
-  GSR[0] = myPort.read();         // read it and store it in val
+  GSR[0] = myPort.read();         // read it and store it in GSR[0]
+  GSR[1] = myPort.read();         // read it and store it in GSR[1]
+  GSR[2] = myPort.read();         // read it and store it in GSR[2]
+
   } 
   println(GSR[0]); //print it out in the console
+  println(GSR[1]);
+  println(GSR[2]);
   
   background(0);
   beat.detect(song.mix);
